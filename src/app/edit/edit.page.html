@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="margin-left:80px">Edit Profile</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button style ="color: whitesmoke;"defaultHref="profile"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="header-bg" >
+    <p style="color:white;margin-top:-5px;padding-left:10px">Cancel</p>
+    <p style="color:white" class="clear">Done</p>
+   
+   
+  </div>
+  <div class="flex">
+  <div class="border-pink">
+  <div class="border"> 
+  <div class="image">
+    <img src="./assets/avatar.jpg">
+  </div>
+</div>
+</div>
+</div>
+<div>
+  <h4 style="padding-left: 10px;">Basic information</h4>
+  <ion-item>
+    <ion-input placeholder="Name" style="padding-left:10px; font-family:sans-serif;"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input placeholder="Email" style="padding-left:10px; font-family:sans-serif;"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input placeholder="Phone number" style="padding-left:10px; font-family:sans-serif;"></ion-input>
+  </ion-item>
+  <ion-list>
+    <ion-radio-group value="male">
+      <ion-list-header>
+        <ion-label>Gender</ion-label>
+      </ion-list-header>
+  
+      <ion-item>
+        <ion-label>Male</ion-label>
+        <ion-radio slot="start" value="male"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Female</ion-label>
+        <ion-radio slot="start" value="female"></ion-radio>
+      </ion-item>
+  
+    </ion-radio-group>
+  </ion-list>
+</div>
+
+</ion-content>

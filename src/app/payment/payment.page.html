@@ -1,0 +1,102 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="margin-left: 60px;">
+      Payments
+    </ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button style ="color: whitesmoke;"defaultHref="profile"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+  <ion-list class="liste">
+    <ion-radio-group value="creditcard">
+      <ion-list-header>
+        <ion-label>Select Payment Method</ion-label>
+      </ion-list-header>
+  
+      <ion-item>
+        <ion-label>Paypal</ion-label>
+        <ion-radio slot="start" value="paypal"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label>Credit Card</ion-label>
+        <ion-radio slot="start" value="creditcard"></ion-radio>
+      </ion-item>
+      </ion-radio-group>
+      </ion-list>
+</div>
+<div>
+ 
+  
+  <ion-list>
+    <ion-radio-group value="dinar">
+      <ion-list-header>
+        <ion-label>Select Card</ion-label>
+      </ion-list-header>
+      <ion-item>
+        <img src="./assets/paypal.png" class="image">
+        <ion-radio slot="start" value="paypal"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <img src="./assets/visa.png" class="image">
+        <ion-radio slot="start" value="visa"></ion-radio>
+      </ion-item>
+  
+      <ion-item>
+        <img src="./assets/master.png" class="image">
+        <ion-radio slot="start" value="master"></ion-radio>
+      </ion-item>
+      
+      <ion-item >
+        <img src="./assets/dinar.jpg" class="image">
+        <ion-radio slot="start" value="dinar"></ion-radio>
+      </ion-item>
+      
+      <ion-item>
+        <img src="./assets/uib.png" class="image">
+        <ion-radio slot="start" value="uib"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <img src="./assets/biat.jpg" class="image">
+        <ion-radio slot="start" value="biat"></ion-radio>
+      </ion-item>
+      <ion-item>
+        <img src="./assets/attijari.png" class="image">
+        <ion-radio slot="start" value="attijari"></ion-radio>
+      </ion-item>
+      
+      </ion-radio-group>
+      </ion-list>
+      
+</div>
+<br>
+<ion-card>
+<ion-item style="padding-left: 30px;padding-right: 30px;">
+  <ion-input  placeholder="Card Name" style="padding-left:10px; font-family:sans-serif;">
+  </ion-input>
+  
+
+</ion-item >
+<ion-item style="padding-left: 30px;padding-right: 30px;">
+  <ion-input  placeholder="Card Number" style="padding-left:10px; font-family:sans-serif;">
+  </ion-input>
+
+</ion-item>
+<ion-item style="padding-left: 30px;padding-right: 30px;" type="text" required="required">
+  <ion-input  type="text" required placeholder="CVC" style="padding-left:10px; font-family:sans-serif;">
+  </ion-input>
+
+</ion-item>
+</ion-card>
+<ion-button style="margin-left: 140px;" fill="outline" (click)="closeModal()" color="primary">
+  Pay
+</ion-button>
+
+
+   
+  </ion-content>

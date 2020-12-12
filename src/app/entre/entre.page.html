@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Appetizers</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button style ="color: whitesmoke;" defaultHref="list"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-fab vertical="top" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="openCart()" #cart>
+      <div class="cart-length">{{cartItemCount | async}}</div>
+      <ion-icon name="cart" class="cart-icon"></ion-icon>
+
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-list>
+    
+    <ion-card button *ngFor="let p of prods" >
+      <ion-card-header >
+        <ion-card-title>
+          
+          <ion-slide>
+            <img src="assets/{{p.image}}" class="thumb" >
+            <ion-label class="nom">{{p.name}}</ion-label>
+              
+          </ion-slide>
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-row class="ion-align-items-center">
+          <ion-col size=12>
+            <ion-label class="descrip">{{p.description}}</ion-label>
+  
+          </ion-col>
+          <ion-col size="8">
+            <ion-label color="secondary">
+              <b> {{p.price | currency :'DT' }}</b>
+            </ion-label>
+
+          </ion-col>
+          <ion-col size="4" class="ion-text-right">
+            <ion-button fill="clear" (click)="addToCart(p)">
+              <ion-icon name="add">
+
+              </ion-icon>
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-card-content>
+  </ion-card>
+  
+
+
+</ion-list>
+</ion-content>

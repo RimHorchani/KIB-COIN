@@ -1,0 +1,42 @@
+<ion-header >
+  <ion-toolbar class="headlist">
+    <ion-title style="margin-left: 50px;">Categories</ion-title>
+    
+        <ion-buttons slot="start">
+          <ion-back-button style ="color: whitesmoke;" defaultHref="profile"></ion-back-button>
+        </ion-buttons>
+    
+  </ion-toolbar>
+ 
+</ion-header>
+
+<ion-content >
+  <ion-list >
+    <ion-card  style="height:180px;width: 300px;margin-left: 25px;"  button *ngFor="let p of products" >
+      <ion-card-header [routerLink]="p.url" [routerDirection]="'root'">
+        
+        <ion-card-title>
+          <p style="size:30px;margin-top:-10px">{{p.name}}</p>
+          
+          <ion-slide>
+            <img src="assets/{{p.image}}" class="thumb" >
+          </ion-slide>
+        </ion-card-title>
+      </ion-card-header>
+      
+
+      
+      
+       
+      
+   
+       
+
+      </ion-card>
+      
+
+    
+  </ion-list>
+
+ 
+</ion-content>

@@ -1,0 +1,26 @@
+
+.rating{
+  width:100%;
+  height:100%;
+  margin:0 auto;
+  padding-top: 30px;
+  text-align: center;
+  border:1px solid #ccc;
+  background:#f9f9f9;
+}
+.rating label:not(:first-of-type){
+  padding-right:2px;
+}
+.rating label:before{
+  content: "\2605";
+  font-size: 42px;
+  color:#ccc;
+  line-height: 1;
+}
+.rating input{
+  display:none;
+}
+.rating input:checked ~ label:before, .rating:not(:checked) > label:hover:before ,.rating:not(:checked){
+  color:#f9df4a;
+  direction: rtl;
+}

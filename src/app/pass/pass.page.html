@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Forget My Password!</ion-title>
+    <ion-buttons slot="start">
+      <ion-button (click)="closeModal()">
+        <ion-icon  style="color: whitesmoke;"  slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+      
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card style="margin-top: 50px;">
+    <ion-list>
+      <ion-radio-group value="biff">
+        <ion-list-header>
+          <ion-label style="font-size: medium;">How would you like to receive your password reset code?</ion-label>
+        </ion-list-header>
+    
+        <ion-item>
+          <ion-icon name="mail-outline"></ion-icon>
+          <ion-label style="padding-left:8px;">Send code by e-mail
+          </ion-label>
+          <ion-radio slot="start" value="biff"></ion-radio>
+        </ion-item>
+    
+        <ion-item>
+          <ion-icon  name="chatbox-ellipses-outline"></ion-icon>
+          <ion-label style="padding-left:8px;">Send the code by text
+          </ion-label>
+          <ion-radio slot="start" value="griff"></ion-radio>
+        </ion-item>
+    
+       
+      </ion-radio-group>
+    </ion-list>
+  </ion-card>
+  <ion-button style="margin-top: 50px;margin-left:140px;">Send</ion-button>
+
+</ion-content>

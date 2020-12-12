@@ -1,0 +1,133 @@
+import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
+export interface Produit{
+  id:number;
+  name:string;
+  url:string;
+ 
+  description:string;
+  price:number;
+  amount:number;
+  image:string;
+
+}
+
+@Injectable({
+  providedIn: 'root'
+})
+export class PizzapService {
+
+  prod:Produit[] =[
+    {
+      id:1,
+      name:'Mexican pizza',
+      url:'/break',
+     
+      description:'onion, chopped garlic cloves, finely chopped green pepper, shredded Monterey Jack cheese',
+      price: 16,
+      amount: 16,
+      image:'pizza1.jpg'
+
+    },
+    {
+      id:1,
+      name:'4 season pizza',
+      url:'/break',
+     
+      description:'Mozzarella jambon white mushrooms Cherry tomatoes Oregano salsa',
+      price: 18,
+      amount: 4,
+      image:'pizza2.jpg'
+
+    },
+    {
+      id:1,
+      name:'Pizza chicken',
+      url:'/break',
+     
+      description:'Salsa mozzarella chiken onion tomatos pepper',
+      price: 15,
+      amount: 4,
+      image:'pizza3.jpg'
+
+    },
+    {
+      id:1,
+      name:'Margherita pizza',
+      url:'/break',
+     
+      description:'Tomato salsa cheeze mozzarella',
+      price: 10,
+      amount: 4,
+      image:'pizza4.jpg'
+
+    },
+    {
+      id:1,
+      name:' Pizza thon ',
+      url:'/break',
+     
+      description:'Salsa thon mozzarella pepper onion',
+      price: 10000,
+      amount: 4,
+      image:'pizza5.jpg'
+
+    },
+    
+   
+  ];
+  private card =[];
+
+  private cartItemCount= new BehaviorSubject(0);
+
+
+  constructor() { }
+  getProds(){
+    return this.prod;
+  }
+  getCart(){
+    return this.card;
+  }
+  getCartItemCount(){
+    return this.cartItemCount;
+
+  }
+  
+  addProduct(prod){
+    let added= false;
+    for(let p of this.card){
+      if(p.id === prod.id){
+        p.amount +=1;
+        added = true;
+        break;
+      }
+    }
+    if(!added){
+      this.card.push(prod);
+    }
+    this.cartItemCount.next(this.cartItemCount.value + 1);
+
+  }
+  decreaseProduct(prod){
+    for(let [index,p] of this.card.entries()){
+      if(p.id === prod.id){
+        p.amount -=1;
+        if(p.amount == 0){
+          this.card.splice(index,1);
+        }
+      }
+
+    }
+    this.cartItemCount.next(this.cartItemCount.value -1);
+
+  }
+  removeProduct(prod){
+    for(let [index,p] of this.card.entries()){
+      if(p.id === prod.id){
+        this.cartItemCount.next(this.cartItemCount.value -p.amount);
+        this.card.splice(index,1);
+      }
+    }
+
+  }
+}

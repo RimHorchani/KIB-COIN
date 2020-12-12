@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title style="margin-left:80px">Options</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button  style ="color: whitesmoke;"defaultHref="profile"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+    <div>
+      <h3 style="margin-left:15px ;color:#D473D4;size: 15px;">Accounts</h3>
+      <ion-item>
+        <ion-icon name="key"></ion-icon>
+        <ion-label style="padding-left:8px;" (click)="change()">Change Password</ion-label>
+      </ion-item>
+    </div>
+    <br>
+    <div>
+      <h3 style="margin-left:15px ;color:#D473D4;size: 15px;">Settings</h3>
+      <ion-item>
+        <ion-icon name="language-outline"></ion-icon>
+        <ion-label (click)="addRate()" style="padding-left:8px;">Languages</ion-label>
+     </ion-item>
+     
+    
+  
+    </div>
+    <br>
+    <div>
+      <h3 style="margin-left:15px ;color:#D473D4;size: 15px;">Notifications</h3>
+      <ion-item>
+        
+        <ion-icon name="heart-outline"></ion-icon>
+        <ion-label style="padding-left:8px;">Receive special offers</ion-label>
+        <ion-toggle color="primary" checked="true" item-end></ion-toggle>
+     </ion-item>
+     <ion-item>
+      
+    <ion-icon name="notifications-outline"></ion-icon>
+      <ion-label style="padding-left:8px;">Get update on your order status</ion-label>
+      <ion-toggle color="primary" checked="false" item-end></ion-toggle>
+   </ion-item>
+    </div>
+    <div>
+      <h3 style="margin-left:15px ;color:#D473D4;size: 15px;">Connect social account</h3>
+      <ion-item>
+        <ion-icon style="color:#0000FF"name="logo-facebook"></ion-icon>
+        <ion-label style="padding-left:8px;">Facebook</ion-label>
+        <ion-toggle color="primary" checked="true" item-end></ion-toggle>
+     </ion-item>
+     <ion-item>
+      <ion-icon style="color:#FF0080"name="logo-instagram"></ion-icon>
+      <ion-label style="padding-left:8px;">Instagram</ion-label>
+      <ion-toggle color="primary" checked="false" item-end></ion-toggle>
+   </ion-item>
+   <ion-item>
+    <ion-icon name="logo-google"></ion-icon>
+    <ion-label style="padding-left:8px;">Google</ion-label>
+    <ion-toggle color="primary" checked="false" item-end></ion-toggle>
+ </ion-item>
+    </div>
+  
+
+
+</ion-content>

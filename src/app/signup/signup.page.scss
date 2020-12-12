@@ -1,0 +1,73 @@
+ion-content.background{
+    --background:url(../../assets/backk.jpg) ;
+    
+ 
+ }
+ .title{
+   color:#400040;
+   font-family: sans-serif;
+   font-size: xx-large;
+   position: fixed;
+   margin-top: -180px;
+   margin-left:60px;
+   text-align: center;
+ }
+ .image{
+   position: fixed;
+   margin-top:-120px;
+   height:75px;
+   width:75px;
+   margin-left: 100px;
+  
+ }
+ 
+ .content{
+   position:fixed;
+   margin-top: 200px;
+   margin-left:50px;
+ }
+ .buttons-action{
+   margin-left:5px;
+ }
+ .signup-text{
+   font-size: x-small;
+   color:#004040;
+   text-align:center;
+   font-family:"Nunito",sans-serif,Bold;
+   text-transform: none;
+ }
+ .signin-text{
+   font-size:small;
+   color:black;
+   text-align:center;
+   font-family: "Nunito",sans-serif,Bold;
+   text-transform: none;
+  
+ }
+ ion-input{
+   background-color: #FFF;
+   border-radius: 5px;
+   font-size: small;
+ }
+ .actionbutton{
+   background-color:#506fd4;
+   color:white;
+   border-radius: 5px;
+   margin-left:15px;
+   margin-right:13px;
+   font-size:small;
+   font-family:"Nunito",sans-serif;
+ }
+ ion-checkbox{
+   background:white;
+   border-radius: 5px;
+   --height:10px;
+   --width:10px;
+   --checkmark-color:white;
+   --background-checked:grey;
+   --border-color:grey;
+ }
+ .line{
+   border-bottom:1px solid grey;
+   margin-bottom:16px;
+ }
